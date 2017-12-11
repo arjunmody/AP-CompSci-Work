@@ -9,18 +9,6 @@ public class IrregularPolygon
     private ArrayList<Double> perim = new ArrayList<Double>();
     private DrawingTool Pencil;
     private SketchPad Paper;
-    public static void main(String[] args) 
-    {
-        IrregularPolygon points = new IrregularPolygon();
-        points.add(new Point2D.Double(0,0));
-        points.add(new Point2D.Double(0,200));
-        points.add(new Point2D.Double(100,300));
-        points.add(new Point2D.Double(200,200));
-        points.add(new Point2D.Double(200,0));
-        points.draw();
-        System.out.println("The Perimeter is: " + points.perimeter());
-        System.out.println("The Area is: " + points.area());
-    }
     // public methods
     public void add(Point2D.Double aPoint)  
     {
@@ -35,7 +23,8 @@ public class IrregularPolygon
         Pencil.move(first.x, first.y);
         Pencil.down();
         Iterator<Point2D.Double> iterate = Polygon.iterator();
-        while(iterate.hasNext()){
+        while(iterate.hasNext())
+        {
              Point2D.Double next = iterate.next();
              Pencil.move(next.x, next.y);
         }
@@ -45,11 +34,11 @@ public class IrregularPolygon
     {
         for (int i = 0; i < Polygon.size()-1; i++) 
         {
-            double a = 0;
+            double dist = 0;
             Point2D.Double point1 = Polygon.get(i);
             Point2D.Double point2 = Polygon.get(i+1);
-            a = Math.pow(Math.pow(point2.x - point1.x, 2.0) + Math.pow(point2.y - point1.y, 2.0), 0.5);
-            perim.add(a);
+            dist = Math.pow(Math.pow(point2.x - point1.x, 2.0) + Math.pow(point2.y - point1.y, 2.0), 0.5);
+            perim.add(dist);
         }
         Point2D.Double c = Polygon.get(Polygon.size()-1);
         Point2D.Double b = Polygon.get(0);
