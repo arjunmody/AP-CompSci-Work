@@ -1,10 +1,14 @@
 #BlueJ class context
-comment0.params=aPoint
-comment0.target=void\ add(java.awt.geom.Point2D.Double)
-comment1.params=
-comment1.target=void\ draw()
+comment0.params=
+comment0.target=IrregularPolygon()
+comment1.params=aPoint
+comment1.target=void\ add(java.awt.geom.Point2D.Double)
 comment2.params=
-comment2.target=double\ perimeter()
+comment2.target=java.lang.String\ getName()
 comment3.params=
-comment3.target=double\ area()
-numComments=4
+comment3.target=void\ draw()
+comment4.params=
+comment4.target=double\ perimeter()
+comment5.params=
+comment5.target=double\ area()
+numComments=6

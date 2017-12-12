@@ -9,15 +9,27 @@ public class IrregularPolygon
     private ArrayList<Double> perim = new ArrayList<Double>();
     private DrawingTool Pencil;
     private SketchPad Paper;
+    private String name;
+    //constructors
+    public IrregularPolygon()
+    {
+        Paper = new SketchPad(500, 500);
+        Pencil = new DrawingTool(Paper);
+        ArrayList <Point2D.Double> Polygon;
+    }
     // public methods
     public void add(Point2D.Double aPoint)  
     {
         Polygon.add(aPoint);
     }
+    public String getName()
+    {
+        this.name = "Arjun Mody";
+        return name;
+    }
+        
     public void draw() 
     {
-        Paper = new SketchPad(750, 750);
-        Pencil = new DrawingTool(Paper);
         Pencil.up();
         Point2D.Double first = Polygon.get(0);
         Pencil.move(first.x, first.y);
