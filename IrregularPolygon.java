@@ -16,6 +16,7 @@ public class IrregularPolygon
         Paper = new SketchPad(500, 500);
         Pencil = new DrawingTool(Paper);
         ArrayList <Point2D.Double> Polygon;
+        ArrayList<Double> perim;
     }
     // public methods
     public void add(Point2D.Double aPoint)  
