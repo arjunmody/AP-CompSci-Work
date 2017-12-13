@@ -11,7 +11,7 @@ public class ArjunMody implements Polygon
     private SketchPad Paper;
     private String name;
     //constructors
-    public IrregularPolygon()
+    public ArjunMody()
     {
         Paper = new SketchPad(500, 500);
         Pencil = new DrawingTool(Paper);
